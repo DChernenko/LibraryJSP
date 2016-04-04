@@ -1,23 +1,23 @@
 <%@page import="java.util.Enumeration" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>JSP Page</title>
 </head>
-<body>
+<body>--%>
 <div style="margin:30px;">
     <a href="main_new.jsp"><< вернуться</a>
 </div>
 
 <div class="pdf_viewer">
-    <applet CODE="EmbedPDF.class" archive="<%=request.getContextPath()%>/jars/EmbedPDF.jar"
+    <applet CODE="EmbedPDF.class" archive="${pageContext.request.contextPath}/jars/EmbedPDF.jar"
             WIDTH="850" HEIGHT="900">
         <!-- The URL of the PDF document that we want to show: -->
         <%--<%=request.getContextPath()%>--%>
         <param name="pdf"
-               value="<%= request.getContextPath()%>/PdfContent?index=<%=request.getParameter("index")%>&session_id=<%=request.getSession().getId()%>"/>
+               value="${pageContext.request.contextPath}/PdfContent?index=<%=request.getParameter("index")%>&session_id=<%=request.getSession().getId()%>"/>
 
         <!-- Whether users may open the PDF document in a new window: -->
         <param name="enableOpenWindow" value="true"/>
@@ -50,4 +50,7 @@
         <param name="centerimage" value="true"/>
     </applet>
 </div>
+<%--
 
+</body>
+</html>--%>

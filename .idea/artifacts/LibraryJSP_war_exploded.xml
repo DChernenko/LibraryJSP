@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="LibraryJSP:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/LibraryJSP_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="LibraryJSP" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="EmbedPDF" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="LibraryJSP/web/Web" />
+    </root>
+  </artifact>
+</component>

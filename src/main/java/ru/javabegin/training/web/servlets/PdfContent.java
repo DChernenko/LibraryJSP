@@ -36,11 +36,8 @@ public class PdfContent extends HttpServlet {
         OutputStream out = response.getOutputStream();
         try {
             int index = Integer.valueOf(request.getParameter("index"));
-
             HashMap sessionMap = (HashMap) getServletContext().getAttribute("sessionMap");
-
             HttpSession session = (HttpSession) sessionMap.get(request.getParameter("session_id"));
-
             ArrayList<Book> list = (ArrayList<Book>) session.getAttribute("currentBookList");
             Book book = list.get(index);
             book.fillPdfContent();

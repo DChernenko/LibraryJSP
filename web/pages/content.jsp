@@ -12,11 +12,12 @@
 </div>
 
 <div class="pdf_viewer">
-    <applet CODE="EmbedPDF.class" archive="<%=request.getServletContext().getContextPath()%>/jars/EmbedPDF.jar"
+    <applet CODE="EmbedPDF.class" archive="<%=request.getContextPath()%>/jars/EmbedPDF.jar"
             WIDTH="850" HEIGHT="900">
         <!-- The URL of the PDF document that we want to show: -->
         <%--<%=request.getContextPath()%>--%>
-        <param name="pdf"value="<%= request.getContextPath()%>/PdfContent?index=<%=request.getParameter("index")%>&session_id=<%=request.getSession().getId()%>"/>
+        <param name="pdf"
+               value="<%= request.getContextPath()%>/PdfContent?index=<%=request.getParameter("index")%>&session_id=<%=request.getSession().getId()%>"/>
 
         <!-- Whether users may open the PDF document in a new window: -->
         <param name="enableOpenWindow" value="true"/>
@@ -40,8 +41,8 @@
         <param name="java_arguments" value="-Djnlp.packEnabled=true -Xmx128m"/>
 
         <!-- the splash screen to show, while the applet loads. -->
-        <param name="image" value="<%=request.getServletContext().getContextPath()%>/images/splash.gif"/>
-       <%-- <br><%=request.getServletContext().getContextPath()%>--%>
+        <param name="image" value="<%=request.getContextPath()%>/images/splash.gif"/>
+        <%-- <br><%=request.getServletContext().getContextPath()%>--%>
         <!-- the border of the splash screen. -->
         <param name="boxborder" value="false"/>
 
